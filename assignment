@@ -1,0 +1,15 @@
+@mixin my-button($size: 15, $color: red) {
+  @include inline-block;
+  @include border-radius(5px);
+  font-size: $size + px;
+  background-color: $color;
+}
+%button {
+  @include my-button;
+}
+%alt-button {
+  @include my-button(15, green);
+}
+%big-button {
+  @include my-button(25);
+}
